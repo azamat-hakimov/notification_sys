@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: configserver  # The name of this microservice (Spring Cloud Config Server)
+
+  profiles:
+    active: native  # Enables the 'native' profile, meaning configuration will be stored locally (not in Git)
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config  # Looks for configuration files inside the 'config' folder in the classpath
+
+server:
+  port: 8071  # This microservice (Config Server) runs on port 8071

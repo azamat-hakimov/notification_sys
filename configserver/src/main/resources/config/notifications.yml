@@ -1,0 +1,6 @@
+server:
+  port: 8080  # This microservice (notifications) runs on port 8080
+
+# Default notification message used in the application
+default:
+  message: ", you have a new notification!"  # This message can be used as a default notification response

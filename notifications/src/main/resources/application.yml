@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: notifications  # Name of this microservice (must match the config file in Config Server)
+
+  config:
+    import: optional:configserver:http://localhost:8071  # Import configuration from Config Server running on port 8071
+
+eureka:
+  instance:
+    prefer-ip-address: true  # Register this service in Eureka using its IP address instead of the hostname
+
+  client:
+    fetch-registry: true  # This microservice fetches the list of registered services from Eureka
+    register-with-eureka: true  # This microservice registers itself with Eureka
+    service-url:
+      defaultZone: http://localhost:8070/eureka/  # URL of the Eureka Server for service discovery
