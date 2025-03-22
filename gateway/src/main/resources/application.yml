@@ -12,6 +12,13 @@ spring:
           enabled: false
           lowerCaseServiceId: true
 
+  # added security
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:1010/realms/notification-sys
+
 
 eureka:
   instance:
